@@ -1,0 +1,112 @@
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+	border: 1px solid;
+	border-color: $color__border-button;
+	border-radius: 3px;
+	background: $color__background-button;
+	color: rgba(0, 0, 0, .8);
+	@include font-size(0.75);
+	line-height: 1;
+	padding: .6em 1em .4em;
+	text-shadow: 0 1px 0 rgba(255, 255, 255, 0.8);
+
+	&:hover {
+		border-color: $color__border-button-hover;
+		
+	}
+
+	&:active,
+	&:focus {
+		
+	}
+}
+
+//for search button
+.menu-item-125 {
+  display: inline-block;
+  padding: 0;
+  margin:0;
+}
+
+.bop-nav-search {
+	position:absolute;
+	top:0;
+	right:-10px;
+
+	input[type="submit"] {
+	  height: 20px;
+	  width: auto;
+	  display: inline-block;
+	  color:red;
+	  float: right;
+	  background: url(icons/search.png) center center no-repeat;
+	  background-size:contain;
+	  text-indent: -10000px;
+	  border: none;
+	  position: absolute;
+	  top: 0;
+	  right: 0;
+	  z-index: 2;
+	  cursor: pointer;
+	  cursor: pointer;
+	  transition: opacity .4s ease;
+	}
+}
+
+
+#contact {
+    input[type="submit"] {
+      	position:relative;
+		font-family:$font__button;
+		font-size:$font__button-size;
+		text-transform:uppercase;
+		text-decoration:none;
+		vertical-align:top;
+		padding:0 0 5px 0;
+		border:none;
+		border-radius:0;
+		border-bottom: 2px solid $color__black;
+		background-color:transparent;
+    }
+    #nf_submit_1 {
+    	position:relative;
+    	margin-right:40px;
+    	display:inline-block;
+    	float:right;
+    	&:after {
+		position:absolute;
+		content: url(icons/share.png);
+		display:inline-block;
+		margin-left:60px;
+		top:0;
+		bottom:0;
+		border-bottom:none;
+		text-decoration:none;
+		@include transition(all .5s ease-in-out);
+	}
+	&:before {
+		position:absolute;
+		content: url(icons/share-hover.png);
+		display:inline-block;
+		right:-40px;
+		top:0;
+		bottom:0;
+		border-bottom:none;
+		text-decoration:none;
+		opacity:0;
+		@include transition(all .5s ease-in-out);
+	}
+	&:hover {
+	    &:before {
+			opacity:1;
+			@include transition(all .5s ease-in-out);
+		}
+		&:after {
+			opacity:0;
+			@include transition(all .5s ease-in-out)
+		}
+    }
+}
+}

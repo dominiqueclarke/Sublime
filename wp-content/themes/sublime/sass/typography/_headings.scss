@@ -1,0 +1,115 @@
+h1, h2, h3, h4, h5, h6 {
+	clear: both;
+	display:inline-block;
+	margin:0 0 20px 0;
+
+	a {
+		padding:0;
+		border-bottom:none;
+	}
+}
+
+h1 {
+	font-family:$font__h1;
+	border-bottom:2px solid black;
+	text-align:center;
+	text-transform:uppercase;
+	letter-spacing:10px;
+	@include media($large-screen) {
+		font-size:$font__h1-size;
+	}
+}
+
+.site-branding h1 {
+	border-bottom:0px;
+	position:relative;
+	&:after {
+	    content: "";
+	    position: absolute;
+	    width: 60px;
+	    bottom: 0;
+	    left: calc(50% - 30px);
+	    border-bottom: 2px solid $color__black;
+	}
+}
+
+h2 {
+	font-family:$font__h2;
+	text-align:center;
+	text-transform:uppercase;
+	padding-bottom:10px;
+	position:relative;
+	letter-spacing:10px;
+	&:after {
+	    content: "";
+	    position: absolute;
+	    width: 60px;
+	    bottom: 0;
+	    left: calc(50% - 30px);
+	    border-bottom: 2px solid $color__black;
+	}
+
+	@include media($large-screen) {
+		font-size:$font__h2-size;
+	}
+}
+
+h3 {
+	font-family:$font__h3;
+	text-align:center;
+	text-transform:uppercase;
+	letter-spacing:3px;
+	@include media($large-screen) {
+		font-size:$font__h3-size;
+		border-bottom:2px solid black;
+	}
+}
+
+h4 {
+	font-family:$font__h4;
+	font-weight:bold;
+	text-align:left;
+	text-transform:uppercase;
+	letter-spacing:3px;
+
+	@include media($large-screen) {
+		font-size:$font__h4-size;
+	}
+}
+
+.gallery.grid-items {
+	h4 {
+		position:relative;
+		padding-bottom:10px;
+		&:after {
+	    content: "";
+	    position: absolute;
+	    width: 60px;
+	    bottom: 0;
+	    left: calc(50% - 30px);
+	    border-bottom: 2px solid $color__white;
+		}
+	}
+}
+
+header, section heading {
+	display:block;
+	text-align:center;
+	padding-bottom:40px;
+}
+
+h1.inverse, h2.inverse, h3.inverse, h4.inverse {
+	color:$color__white;
+}
+
+h1.inverse {
+	border-bottom:2px solid white;
+}
+
+h2.inverse:after {
+	border-bottom: 2px solid white;
+}
+
+h3.inverse {
+	border-bottom:2px solid white;
+}

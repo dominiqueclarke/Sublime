@@ -1,0 +1,69 @@
+@font-face {
+  font-family: 'Aileron Regular';
+  src: url('fonts/aileron-regular.otf');
+}
+
+@font-face {
+  font-family: 'Aileron Light';
+  src: url('fonts/aileron-light.otf');
+}
+
+@font-face {
+  font-family: 'Aileron Bold';
+  src: url('fonts/aileron-Bold.otf');
+}
+
+@font-face {
+  font-family: 'Aileron SemiBold';
+  src: url('fonts/aileron-semibold.otf');
+}
+
+@font-face {
+	font-family: 'Crimson Text';
+	src: url('fonts/CrimsonText-Regular.ttf');
+}
+
+@font-face {
+	font-family: 'Crimson Text Italic';
+	src: url('fonts/CrimsonText-italic.ttf');
+}
+
+@font-face {
+  font-family: 'Font Awesome';
+  src: url('fonts/fontawesome-webfont.ttf');
+}
+
+$font__main: 'Aileron Light';
+$font__h1: 'Aileron Bold';
+$font__h2: 'Aileron Bold';
+$font__h3: 'Aileron Bold';
+$font__h4: 'Aileron SemiBold';
+$font__button: 'Aileron Bold';
+$font__description: 'Aileron Regular';
+$font__emphasis: 'Crimson Text';
+$font__postscript: 'Crimson Text Italic';
+$font__code: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+$font__pre: "Courier 10 Pitch", Courier, monospace;
+$font__line-height-body: 1.5;
+$font__line-height-pre: 1.6;
+$font__h1-size:5.750em;
+$font__h1-size-small:3em;
+$font__h2-size:3.125em;
+$font__h2-size-small:2em;
+$font__h3-size:1.25em;
+$font__h4-size:1.25em;
+$font__nav-size:1.125em;
+$font__body-size:1em;
+$font__site-title-size:1.625em;
+$font__body-size-small:1em;
+$font__emphasis-size:20px;
+$font__postscript-size:20px;
+$font__emphasis-size-small:12px;
+$font__postscript-size-small:12px;
+$font__button-size:16px;
+
+
+@include media($large-screen) {
+  $font__h1-size:13em;
+ 
+} 

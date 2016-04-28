@@ -1,0 +1,97 @@
+nav.main-navigation {
+	width:100%;
+	position:relative;
+	a {
+		color:white;
+		border-bottom:none;
+	}
+	float:left;
+	h2 {
+		font-family:'Aileron Bold';
+		font-size: $font__site-title-size;
+		color:white;
+		text-transform:uppercase;
+		margin-right:20px;
+		margin-bottom:0px;
+		padding-bottom:0px;
+		vertical-align:middle;
+		border-bottom:0px;
+		letter-spacing:normal;
+		&:after {
+			border-bottom:none;
+		}
+	}
+	ul, div.menu-primary-menu-container {
+		display:inline-block;
+	}
+	ul {
+		text-align:center;
+		list-style:none;
+		margin:0;
+		padding:0;
+		li {
+			@extend h3;
+			display:inline-block;
+			margin:50px 20px;
+			font-size:$font__nav-size;
+			border-bottom:0px;	
+			letter-spacing:normal;
+			a {
+				padding-bottom:2px;
+				border-bottom:2px solid white;
+				@include transition(all .3s ease);
+				&:hover {
+					color:$color__black;
+					border-bottom:2px solid $color__black;
+					@inlude transition(all .3s ease);
+				}
+			}
+		}
+		
+		.navlinks {
+			float:left;
+		}
+	}
+
+	@include media($small-screen) {
+		h2 {
+			display:none;
+		}
+	}
+}
+
+/* Small menu. */
+.menu-toggle,
+.main-navigation.toggled ul {
+	display: block;
+}
+
+@media screen and (min-width: 37.5em) {
+	.menu-toggle {
+		display: none;
+	}
+	.main-navigation ul {
+		display: block;
+	}
+}
+
+.comment-navigation,
+.posts-navigation,
+.post-navigation {
+
+	.site-main & {
+		margin: 0 0 1.5em;
+		overflow: hidden;
+	}
+
+	.nav-previous {
+		float: left;
+		width: 50%;
+	}
+
+	.nav-next {
+		float: right;
+		text-align: right;
+		width: 50%;
+	}
+}

@@ -1,0 +1,108 @@
+input[type="text"],
+input[type="email"],
+input[type="url"],
+input[type="password"],
+input[type="search"],
+input[type="number"],
+input[type="tel"],
+input[type="range"],
+input[type="date"],
+input[type="month"],
+input[type="week"],
+input[type="time"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="color"],
+textarea {
+	color: $color__text-input;
+	border: 1px solid $color__border-input;
+	border-radius: 3px;
+
+	&:focus {
+		color: $color__text-input-focus;
+	}
+}
+
+select {
+	border: 1px solid $color__border-input;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="url"],
+input[type="password"],
+input[type="search"],
+input[type="number"],
+input[type="tel"],
+input[type="range"],
+input[type="date"],
+input[type="month"],
+input[type="week"],
+input[type="time"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="color"] {
+	padding: 3px;
+}
+
+textarea {
+	padding-left: 3px;
+	width: 100%;
+}
+
+.bop-nav-search {
+
+input[type="search"] {
+  height: 1.5em;
+  font-size: 1em;
+  display: inline-block;
+  font-family: "Lato";
+  font-weight: 100;
+  border: none;
+  outline: none;
+  color: $color__white;
+  padding: 3px;
+  padding-right: 30px;
+  width: 0px;
+  position: absolute;
+  top: -10px;
+  right: 0;
+  background: none;
+  z-index: 3;
+  transition: width .4s cubic-bezier(0.000, 0.795, 0.000, 1.000);
+  cursor: pointer;
+  border-radius:0px;
+  margin-top:4px;
+}
+
+input[type="search"]:focus:hover {
+  border-bottom: 2px solid $color__white;
+}
+
+input[type="search"]:focus {
+  width: 80px;
+  z-index: 1;
+  border-bottom: 2px solid $color__white;
+  cursor: text;
+  transition: width .4s cubic-bezier(0.000, 0.795, 0.000, 1.000);
+}
+
+}
+
+#contact {
+	input[type="text"], textarea {
+		  height: 1.5em;
+		  font-size: 1em;
+		  display: inline-block;
+		  font-family: "Aileron Light";
+		  font-weight: 100;
+		  border: none;
+		  outline: none;
+		  color: $color__white;
+		  width: 100%;
+		  background: none;
+		  z-index: 3;
+		  cursor: text;
+		  border-bottom: 1px solid $color__white; 
+	}
+}

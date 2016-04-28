@@ -1,0 +1,141 @@
+a {
+	color: $color__link;
+	text-decoration:none;
+
+	&:visited {
+		color: $color__link-visited;
+	}
+	&:hover,
+	&:focus,
+	&:active {
+		color: $color__link-hover;
+	}
+	&:focus {
+		outline: thin dotted;
+	}
+	&:hover,
+	&:active {
+		outline: 0;
+	}
+}
+
+a.btn {
+	color: $color__black;
+}
+
+.btn {
+	position:relative;
+	font-family:$font__button;
+	font-size:$font__button-size;
+	text-transform:uppercase;
+	text-decoration:none;
+	span {
+		vertical-align:top;
+		padding-bottom:5px;
+		border-bottom:2px solid $color__black;
+	}
+}
+
+.btn.down {
+	&:after {
+		content: url(icons/arrow-down.png);
+		display:inline-block;
+		margin-left:20px;
+		border-bottom:none;
+		text-decoration:none;
+		@include transition(all .5s ease-in-out);
+	}
+	&:before {
+		position:absolute;
+		content: url(icons/arrow-down-hover.png);
+		display:inline-block;
+		right:0;
+		border-bottom:none;
+		text-decoration:none;
+		opacity:0;
+		@include transition(all .5s ease-in-out);
+	}
+}
+
+.btn.up {
+	&:after {
+		content: url(icons/arrow-up.png);
+		display:inline-block;
+		margin-left:20px;
+		border-bottom:none;
+		text-decoration:none;
+		@include transition(all .5s ease-in-out);
+	}
+	&:before {
+		position:absolute;
+		content: url(icons/arrow-up-hover.png);
+		display:inline-block;
+		right:0;
+		border-bottom:none;
+		text-decoration:none;
+		opacity:0;
+		@include transition(all .5s ease-in-out);
+	}
+}
+
+.btn.right {
+	&:after {
+		content: url(icons/arrow-right.png);
+		display:inline-block;
+		margin-left:20px;
+		border-bottom:none;
+		text-decoration:none;
+		@include transition(all .5s ease-in-out);
+	}
+	&:before {
+		position:absolute;
+		content: url(icons/arrow-right-hover.png);
+		display:inline-block;
+		right:0;
+		border-bottom:none;
+		text-decoration:none;
+		opacity:0;
+		@include transition(all .5s ease-in-out);
+	}
+}
+
+.btn.share {
+	&:after {
+		position:absolute;
+		content: url(icons/share.png);
+		display:inline-block;
+		margin-left:20px;
+		top:0;
+		bottom:0;
+		border-bottom:none;
+		text-decoration:none;
+		@include transition(all .5s ease-in-out);
+	}
+	&:before {
+		position:absolute;
+		content: url(icons/share-hover.png);
+		display:inline-block;
+		right:-44px;
+		top:0;
+		bottom:0;
+		border-bottom:none;
+		text-decoration:none;
+		opacity:0;
+		@include transition(all .5s ease-in-out);
+	}
+}
+
+
+
+
+//Creating a smooth transition to new button hover icon
+.btn:hover {
+	&:before {
+		opacity:1;
+		@include transition(all .5s ease-in-out);
+	}
+	&:after {
+		opacity:0;
+		@include transition(all .5s ease-in-out)
+	}
+}
