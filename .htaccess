@@ -8,4 +8,12 @@ RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule . /sublime3/index.php [L]
 </IfModule>
 
+
+<FilesMatch "\.(ttf|otf)$">
+<IfModule mod_headers.c>
+Header set Access-Control-Allow-Origin "*"
+</IfModule>
+</FilesMatch>
+
 # END WordPress
+

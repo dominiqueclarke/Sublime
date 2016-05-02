@@ -186,14 +186,13 @@ get_header(); ?>
 					    </span>
 				   	</div>
 				  </a>
-
 				</div>
 				<div class="gallery-description">
 					<div class="grid-items">
 						<div class="content grid-item grid-item-two-thirds">
 							<p><?php the_field('gallery_description'); ?></p>
 						</div>
-						<div class="button-content grid-item grid-item-third"><a href="" class="btn down"><span><?php the_field('load_more_gallery_btn'); ?></span></a>
+						<div class="button-content grid-item grid-item-third"><a href="" class="btn down load_more"><span><?php the_field('load_more_gallery_btn'); ?></span></a>
 						</div>
 					</div>
 				</div>
@@ -209,8 +208,8 @@ get_header(); ?>
 				<div class="grid-items">
 				<div class="profile_photo grid-item grid-item-fourth">
 					<img src="<?php the_field('profile_photo'); ?>" />
-					<span><?php the_field('profile_name'); ?></span>
-					<span><?php the_field('profile_job_title'); ?></span>
+					<p class="profile_name"><?php the_field('profile_name'); ?></p>
+					<p class="profile_job_title"><?php the_field('profile_job_title'); ?></p>
 				</div>
 				<div class="profilecontent grid-item grid-item-half">
 					<h4><?php the_field('profile_content_heading'); ?></h4>
@@ -218,8 +217,8 @@ get_header(); ?>
 				</div>
 				<div class="profileaside grid-item grid-item-fourth">
 					<h4><?php the_field('aside_heading'); ?></h4>
-					<p><?php the_field('aside_content'); ?></p>
-					<p><?php the_field('aside_postscript'); ?></p>
+					<p class="aside_content"><?php the_field('aside_content'); ?></p>
+					<p class="aside_postscript"><?php the_field('aside_postscript'); ?></p>
 				</div>
 			</div>
 			</section>
@@ -252,16 +251,16 @@ get_header(); ?>
 									<img class="blog_feed_featured_image" src="<?php the_post_thumbnail_url(); ?>" alt="<?php the_title(); ?>"/>
 									<div class="photo-hover-content">
 										<div class="icon-container">
-											<img src="http://localhost:8888/sublime3/wp-content/uploads/2016/01/icon.png" alt="">
+											<img src="http://whatevernoble.com/wp-content/uploads/2016/01/icon.png" alt="">
 									    </div>
 									    <span class="post-meta-data">
 									    	<div class="post-date">
-										    	<img src="http://localhost:8888/sublime3/wp-content/uploads/2016/01/clock.png" />
+										    	<img src="http://whatevernoble.com/wp-content/uploads/2016/01/clock.png" />
 										    	<div class="day">25</div>
 										    	<div class="month">Nov</div>
 										    </div>
 												<div class="comments">
-													<img src="http://localhost:8888/sublime3/wp-content/uploads/2016/03/comment.png" />
+													<img src="http://whatevernoble.com/wp-content/uploads/2016/03/comment.png" />
 													<div><?php echo get_comments_number(); ?></div>
 												</div>
 									    </span>
@@ -296,12 +295,13 @@ get_header(); ?>
 					<div><h2><?php the_field('featured_project_heading'); ?></h2></div>
 					<div><h3><?php the_field('featured_project_subheading'); ?></h3></div>
 				</heading>
-				<div class="grid-items">
+				<div class="grid-items featured_project_grid">
 					<div class="side1 grid-item grid-item-half">
 						<img src="<?php the_field('main_project_photo'); ?>" />
 						<div class="side1_content">
 							<h4><?php the_field('supporting_description_heading'); ?></h4>
 							<p><?php the_field('supporting_description_content'); ?></p>
+							<span class="side1_postscript"><?php the_field('supporting_description_postscript'); ?></span>
 						</div>
 					</div>
 					<div class="side2 grid-item grid-item-half">

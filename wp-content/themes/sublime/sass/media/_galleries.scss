@@ -66,6 +66,7 @@
     text-decoration: none;
     width: 100%;
     background-size:cover;
+    text-align:justify;
   }
 
   .grid-item img {
@@ -80,7 +81,6 @@
   }
 
   .grid-item p {
-    line-height: 1.5em;
     margin: auto;
   }
 
@@ -121,7 +121,7 @@
   }
 }
 
-.grid-items.gallery, .grid-items.blog_feed_grid {
+.grid-items.gallery, .grid-items.blog_feed_grid, grid-items.featured_project_grid {
    .grid-item-third {
     @include media($medium-screen) {
       @include grid-item-columns($grid-item-third-columns);
@@ -143,6 +143,12 @@
   .grid-item-fourth {
     @include media($medium-screen) {
       @include grid-item-columns($grid-item-fourth-columns);
+    }
+  }
+
+  .grid-item-three-eights {
+    @include media($medium-screen) {
+      @include grid-item-columns($grid-item-three-eights-columns);
     }
   }
 

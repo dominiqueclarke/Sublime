@@ -56,7 +56,7 @@ nav.main-navigation {
 			display:none;
 		}
 
-		#primary-menu li:nth-child(1), li:nth-child(2), li:nth-child(3), li:nth-child(4), .bop-nav-search {
+		#primary-menu li:nth-of-type(1), li:nth-of-type(2), li:nth-of-type(3), li:nth-of-type(4), .bop-nav-search {
 			display:none;
 		}
 	}
@@ -70,7 +70,7 @@ nav.main-navigation {
 			display:inline-block;
 		}
 
-		#primary-menu li:nth-child(1), li:nth-child(2), li:nth-child(3), li:nth-child(4), .bop-nav-search {
+		#primary-menu li:nth-of-type(1), li:nth-of-type(2), li:nth-of-type(3), li:nth-of-type(4), .bop-nav-search {
 			display:inline-block;
 		}
 	}
