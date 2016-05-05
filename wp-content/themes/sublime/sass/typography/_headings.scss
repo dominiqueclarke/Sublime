@@ -11,10 +11,18 @@ h1, h2, h3, h4, h5, h6 {
 
 h1 {
 	font-family:$font__h1;
-	border-bottom:2px solid black;
+	position:relative;
 	text-align:center;
 	text-transform:uppercase;
 	letter-spacing:10px;
+	&:after {
+	    content: "";
+	    position: absolute;
+	    width: 60px;
+	    bottom: 0;
+	    left: calc(50% - 30px);
+	    border-bottom: 2px solid $color__black;
+	}
 	@include media($large-screen) {
 		font-size:$font__h1-size;
 	}
@@ -23,13 +31,11 @@ h1 {
 .site-branding h1 {
 	border-bottom:0px;
 	position:relative;
-	&:after {
-	    content: "";
-	    position: absolute;
-	    width: 60px;
-	    bottom: 0;
-	    left: calc(50% - 30px);
-	    border-bottom: 2px solid $color__black;
+}
+
+h1.site-title {
+	@include media($large-screen) {
+		font-size:$font__h1-size-large;
 	}
 }
 
@@ -71,7 +77,6 @@ h4 {
 	text-align:left;
 	text-transform:uppercase;
 	letter-spacing:3px;
-
 	@include media($large-screen) {
 		font-size:$font__h4-size;
 	}

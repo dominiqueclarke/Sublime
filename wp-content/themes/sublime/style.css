@@ -369,25 +369,13 @@ h1 a, h2 a, h3 a, nav.main-navigation ul li a, h4 a, h5 a, h6 a {
 /* line 12, sass/typography/_headings.scss */
 h1 {
   font-family: "Aileron Bold";
-  border-bottom: 2px solid black;
+  position: relative;
   text-align: center;
   text-transform: uppercase;
   letter-spacing: 10px;
 }
-@media screen and (min-width: 1200px) {
-  /* line 12, sass/typography/_headings.scss */
-  h1 {
-    font-size: 5.75em;
-  }
-}
-
-/* line 23, sass/typography/_headings.scss */
-.site-branding h1 {
-  border-bottom: 0px;
-  position: relative;
-}
-/* line 26, sass/typography/_headings.scss */
-.site-branding h1:after {
+/* line 18, sass/typography/_headings.scss */
+h1:after {
   content: "";
   position: absolute;
   width: 60px;
@@ -395,8 +383,27 @@ h1 {
   left: calc(50% - 30px);
   border-bottom: 2px solid black;
 }
+@media screen and (min-width: 1200px) {
+  /* line 12, sass/typography/_headings.scss */
+  h1 {
+    font-size: 3.25em;
+  }
+}
 
-/* line 36, sass/typography/_headings.scss */
+/* line 31, sass/typography/_headings.scss */
+.site-branding h1 {
+  border-bottom: 0px;
+  position: relative;
+}
+
+@media screen and (min-width: 1200px) {
+  /* line 36, sass/typography/_headings.scss */
+  h1.site-title {
+    font-size: 5.75em;
+  }
+}
+
+/* line 42, sass/typography/_headings.scss */
 h2 {
   font-family: "Aileron Bold";
   text-align: center;
@@ -405,7 +412,7 @@ h2 {
   position: relative;
   letter-spacing: 10px;
 }
-/* line 43, sass/typography/_headings.scss */
+/* line 49, sass/typography/_headings.scss */
 h2:after {
   content: "";
   position: absolute;
@@ -415,13 +422,13 @@ h2:after {
   border-bottom: 2px solid black;
 }
 @media screen and (min-width: 1200px) {
-  /* line 36, sass/typography/_headings.scss */
+  /* line 42, sass/typography/_headings.scss */
   h2 {
     font-size: 3.125em;
   }
 }
 
-/* line 57, sass/typography/_headings.scss */
+/* line 63, sass/typography/_headings.scss */
 h3, nav.main-navigation ul li {
   font-family: "Aileron Bold";
   text-align: center;
@@ -429,14 +436,14 @@ h3, nav.main-navigation ul li {
   letter-spacing: 3px;
 }
 @media screen and (min-width: 1200px) {
-  /* line 57, sass/typography/_headings.scss */
+  /* line 63, sass/typography/_headings.scss */
   h3, nav.main-navigation ul li {
     font-size: 1.25em;
     border-bottom: 2px solid black;
   }
 }
 
-/* line 68, sass/typography/_headings.scss */
+/* line 74, sass/typography/_headings.scss */
 h4 {
   font-family: "Aileron SemiBold";
   font-weight: bold;
@@ -445,18 +452,18 @@ h4 {
   letter-spacing: 3px;
 }
 @media screen and (min-width: 1200px) {
-  /* line 68, sass/typography/_headings.scss */
+  /* line 74, sass/typography/_headings.scss */
   h4 {
     font-size: 1.25em;
   }
 }
 
-/* line 81, sass/typography/_headings.scss */
+/* line 86, sass/typography/_headings.scss */
 .gallery.grid-items h4 {
   position: relative;
   padding-bottom: 10px;
 }
-/* line 84, sass/typography/_headings.scss */
+/* line 89, sass/typography/_headings.scss */
 .gallery.grid-items h4:after {
   content: "";
   position: absolute;
@@ -466,29 +473,29 @@ h4 {
   border-bottom: 2px solid white;
 }
 
-/* line 95, sass/typography/_headings.scss */
+/* line 100, sass/typography/_headings.scss */
 header, section heading {
   display: block;
   text-align: center;
   padding-bottom: 40px;
 }
 
-/* line 101, sass/typography/_headings.scss */
+/* line 106, sass/typography/_headings.scss */
 h1.inverse, h2.inverse, h3.inverse, nav.main-navigation ul li.inverse, h4.inverse {
   color: white;
 }
 
-/* line 105, sass/typography/_headings.scss */
+/* line 110, sass/typography/_headings.scss */
 h1.inverse {
   border-bottom: 2px solid white;
 }
 
-/* line 109, sass/typography/_headings.scss */
+/* line 114, sass/typography/_headings.scss */
 h2.inverse:after {
   border-bottom: 2px solid white;
 }
 
-/* line 113, sass/typography/_headings.scss */
+/* line 118, sass/typography/_headings.scss */
 h3.inverse, nav.main-navigation ul li.inverse {
   border-bottom: 2px solid white;
 }
@@ -754,7 +761,7 @@ section.site-branding h3, section.site-branding nav.main-navigation ul li, nav.m
   padding: 0;
   text-align: center;
 }
-/* line 152, sass/elements/_elements.scss */
+/* line 150, sass/elements/_elements.scss */
 #collection .gallery.grid-items .grid-item .grid-item-content {
   position: relative;
   height: 100%;
@@ -765,7 +772,7 @@ section.site-branding h3, section.site-branding nav.main-navigation ul li, nav.m
   -moz-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
 }
-/* line 159, sass/elements/_elements.scss */
+/* line 157, sass/elements/_elements.scss */
 #collection .gallery.grid-items .grid-item .grid-item-content span.post_date {
   position: absolute;
   top: 1em;
@@ -775,52 +782,81 @@ section.site-branding h3, section.site-branding nav.main-navigation ul li, nav.m
   padding-bottom: 10px;
   border-bottom: 1px solid white;
 }
-/* line 167, sass/elements/_elements.scss */
+/* line 165, sass/elements/_elements.scss */
 #collection .gallery.grid-items .grid-item .grid-item-content span.post_date .day {
   font-size: 12px;
 }
-/* line 170, sass/elements/_elements.scss */
+/* line 168, sass/elements/_elements.scss */
 #collection .gallery.grid-items .grid-item .grid-item-content span.post_date .month {
   font-size: 7px;
 }
-/* line 173, sass/elements/_elements.scss */
+/* line 171, sass/elements/_elements.scss */
 #collection .gallery.grid-items .grid-item .grid-item-content span.post_date img {
   width: 13px;
   height: auto;
   margin-bottom: 0px;
 }
-/* line 180, sass/elements/_elements.scss */
+/* line 178, sass/elements/_elements.scss */
+#collection .gallery.grid-items .grid-item .grid-item-content.collection-title-block {
+  opacity: 1;
+  color: black;
+}
+/* line 182, sass/elements/_elements.scss */
+#collection .gallery.grid-items .grid-item .grid-item-content.collection-title-block h4:after {
+  border-color: black;
+}
+/* line 187, sass/elements/_elements.scss */
+#collection .gallery.grid-items .grid-item .grid-item-content.collection-title-block .btn {
+  font-size: 12px;
+}
+/* line 189, sass/elements/_elements.scss */
+#collection .gallery.grid-items .grid-item .grid-item-content.collection-title-block .btn:after {
+  margin-left: 10px;
+}
+@media screen and (min-width: 17.5em) {
+  /* line 193, sass/elements/_elements.scss */
+  #collection .gallery.grid-items .grid-item .grid-item-content.collection-title-block .btn:after, #collection .gallery.grid-items .grid-item .grid-item-content.collection-title-block .btn:before {
+    display: none;
+  }
+}
+@media screen and (min-width: 1200px) {
+  /* line 198, sass/elements/_elements.scss */
+  #collection .gallery.grid-items .grid-item .grid-item-content.collection-title-block .btn:after, #collection .gallery.grid-items .grid-item .grid-item-content.collection-title-block .btn:before {
+    display: inline-block;
+  }
+}
+/* line 204, sass/elements/_elements.scss */
 #collection .gallery.grid-items .grid-item .grid-item-content:hover {
   opacity: 1;
   -webkit-transition: all 0.5s ease-in-out;
   -moz-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
 }
-/* line 184, sass/elements/_elements.scss */
+/* line 208, sass/elements/_elements.scss */
 #collection .gallery.grid-items .grid-item img {
   width: 32px;
   height: 32px;
 }
-/* line 191, sass/elements/_elements.scss */
+/* line 215, sass/elements/_elements.scss */
 #collection .gallery-description {
   font-family: "Aileron Regular";
   font-size: 1em;
   text-transform: uppercase;
 }
-/* line 196, sass/elements/_elements.scss */
+/* line 220, sass/elements/_elements.scss */
 #collection .gallery-description .grid-items .grid-item {
   height: auto;
   padding: 0;
 }
-/* line 200, sass/elements/_elements.scss */
+/* line 224, sass/elements/_elements.scss */
 #collection .gallery-description .grid-items .content.grid-item {
   text-align: left;
 }
-/* line 202, sass/elements/_elements.scss */
+/* line 226, sass/elements/_elements.scss */
 #collection .gallery-description .grid-items .content.grid-item p {
   max-width: 100%;
 }
-/* line 209, sass/elements/_elements.scss */
+/* line 233, sass/elements/_elements.scss */
 #collection .grid-items .button-content.grid-item {
   text-align: right;
   padding-right: 0;
@@ -828,77 +864,77 @@ section.site-branding h3, section.site-branding nav.main-navigation ul li, nav.m
   max-width: 100%;
 }
 
-/* line 217, sass/elements/_elements.scss */
+/* line 241, sass/elements/_elements.scss */
 #profile {
   position: relative;
 }
-/* line 219, sass/elements/_elements.scss */
+/* line 243, sass/elements/_elements.scss */
 #profile .grid-items {
   height: 300px;
 }
-/* line 221, sass/elements/_elements.scss */
+/* line 245, sass/elements/_elements.scss */
 #profile .grid-items .grid-item.profile_photo {
   position: relative;
 }
-/* line 224, sass/elements/_elements.scss */
+/* line 248, sass/elements/_elements.scss */
 #profile .grid-items .grid-item {
   text-align: justify;
   padding: 0;
 }
-/* line 227, sass/elements/_elements.scss */
+/* line 251, sass/elements/_elements.scss */
 #profile .grid-items .grid-item p {
   text-align: justify;
   max-width: 100%;
 }
-/* line 231, sass/elements/_elements.scss */
+/* line 255, sass/elements/_elements.scss */
 #profile .grid-items .grid-item img {
   height: 240px;
   width: 240px;
   background-color: blue;
 }
-/* line 236, sass/elements/_elements.scss */
+/* line 260, sass/elements/_elements.scss */
 #profile .grid-items .grid-item .aside_content {
   margin-bottom: 1em;
 }
-/* line 239, sass/elements/_elements.scss */
+/* line 263, sass/elements/_elements.scss */
 #profile .grid-items .grid-item .aside_postscript {
   font-family: "Crimson Text Italic";
 }
 @media screen and (min-width: 17.5em) {
-  /* line 246, sass/elements/_elements.scss */
+  /* line 270, sass/elements/_elements.scss */
   #profile .grid-item {
     height: auto;
   }
-  /* line 249, sass/elements/_elements.scss */
+  /* line 273, sass/elements/_elements.scss */
   #profile .grid-items .profile_photo.grid-item p {
     text-align: center;
   }
-  /* line 252, sass/elements/_elements.scss */
+  /* line 276, sass/elements/_elements.scss */
   #profile .profile_name {
     font-family: "Aileron SemiBold";
     font-size: 1.25em;
     color: black;
   }
-  /* line 257, sass/elements/_elements.scss */
+  /* line 281, sass/elements/_elements.scss */
   #profile .profile_job_title {
     font-size: 20px;
     font-family: "Crimson Text Italic";
   }
-  /* line 261, sass/elements/_elements.scss */
+  /* line 285, sass/elements/_elements.scss */
   #profile .profilecontent.grid-item {
     padding: 1em 0;
   }
 }
 @media screen and (min-width: 1200px) {
-  /* line 267, sass/elements/_elements.scss */
+  /* line 291, sass/elements/_elements.scss */
   #profile .profilecontent.grid-item {
     padding: 0 3em;
   }
-  /* line 270, sass/elements/_elements.scss */
+  /* line 294, sass/elements/_elements.scss */
   #profile .grid-items .profile_photo.grid-item p {
     text-align: left;
   }
-  /* line 273, sass/elements/_elements.scss */
+  /* line 297, sass/elements/_elements.scss */
   #profile .profile_name {
     position: absolute;
     bottom: 30px;
@@ -907,135 +943,135 @@ section.site-branding h3, section.site-branding nav.main-navigation ul li, nav.m
     font-size: 1.25em;
     color: white;
   }
-  /* line 281, sass/elements/_elements.scss */
+  /* line 305, sass/elements/_elements.scss */
   #profile .profile_job_title {
     font-size: 12px;
     font-family: "Crimson Text Italic";
   }
-  /* line 285, sass/elements/_elements.scss */
+  /* line 309, sass/elements/_elements.scss */
   #profile .aside_content {
     font-size: 12px;
   }
 }
 
-/* line 291, sass/elements/_elements.scss */
+/* line 315, sass/elements/_elements.scss */
 #clients {
   text-align: center;
   height: 400px;
 }
-/* line 294, sass/elements/_elements.scss */
+/* line 318, sass/elements/_elements.scss */
 #clients img {
   margin: 50px 0;
 }
-/* line 297, sass/elements/_elements.scss */
+/* line 321, sass/elements/_elements.scss */
 #clients heading {
   padding-bottom: 0px;
 }
-/* line 299, sass/elements/_elements.scss */
+/* line 323, sass/elements/_elements.scss */
 #clients heading h2 {
   font-size: 32px;
 }
-/* line 303, sass/elements/_elements.scss */
+/* line 327, sass/elements/_elements.scss */
 #clients span {
   display: block;
   color: white;
   font-family: "Crimson Text";
 }
 @media screen and (min-width: 1200px) {
-  /* line 303, sass/elements/_elements.scss */
+  /* line 327, sass/elements/_elements.scss */
   #clients span {
     font-size: 20px;
   }
 }
-/* line 312, sass/elements/_elements.scss */
+/* line 336, sass/elements/_elements.scss */
 #clients span.postscript {
   font-family: "Crimson Text Italic";
   color: white;
 }
 
-/* line 319, sass/elements/_elements.scss */
+/* line 343, sass/elements/_elements.scss */
 #blog {
   position: relative;
 }
-/* line 323, sass/elements/_elements.scss */
+/* line 347, sass/elements/_elements.scss */
 #blog div.grid-items.blog_feed_grid:nth-of-type(even) div.grid-item.grid-item-half.blog_feed_image_container {
   float: right;
 }
 @media screen and (min-width: 17.5em) {
-  /* line 328, sass/elements/_elements.scss */
+  /* line 352, sass/elements/_elements.scss */
   #blog .grid-item.grid-item-half.preview {
     padding: 1em 0em;
     height: auto;
   }
-  /* line 331, sass/elements/_elements.scss */
+  /* line 355, sass/elements/_elements.scss */
   #blog .grid-item.grid-item-half.preview h3, #blog .grid-item.grid-item-half.preview nav.main-navigation ul li, nav.main-navigation ul #blog .grid-item.grid-item-half.preview li {
     text-align: left;
   }
-  /* line 335, sass/elements/_elements.scss */
+  /* line 359, sass/elements/_elements.scss */
   #blog .blog_preview .author {
     float: none;
   }
 }
 @media screen and (min-width: 40em) {
-  /* line 341, sass/elements/_elements.scss */
+  /* line 365, sass/elements/_elements.scss */
   #blog .grid-item.grid-item-half.preview {
     padding: 0em 2em 1em;
   }
 }
 @media screen and (min-width: 1200px) {
-  /* line 347, sass/elements/_elements.scss */
+  /* line 371, sass/elements/_elements.scss */
   #blog .grid-item.grid-item-half.preview {
     padding: 2em 2em 1em 2em;
   }
-  /* line 350, sass/elements/_elements.scss */
+  /* line 374, sass/elements/_elements.scss */
   #blog .blog_preview .author {
     float: right;
   }
 }
-/* line 356, sass/elements/_elements.scss */
+/* line 380, sass/elements/_elements.scss */
 #blog .grid-item.blog_feed_image_container {
   position: relative;
   padding: 0;
 }
-/* line 359, sass/elements/_elements.scss */
+/* line 383, sass/elements/_elements.scss */
 #blog .grid-item.blog_feed_image_container img {
   width: 100%;
   height: 100%;
   margin-bottom: 0;
 }
-/* line 364, sass/elements/_elements.scss */
+/* line 388, sass/elements/_elements.scss */
 #blog .grid-item.blog_feed_image_container .grid-item-content img {
   width: auto;
   height: auto;
 }
-/* line 371, sass/elements/_elements.scss */
+/* line 395, sass/elements/_elements.scss */
 #blog .blog_preview .btn {
   font-size: 12px;
 }
-/* line 373, sass/elements/_elements.scss */
+/* line 397, sass/elements/_elements.scss */
 #blog .blog_preview .btn span {
   padding-bottom: 5px;
 }
-/* line 377, sass/elements/_elements.scss */
+/* line 401, sass/elements/_elements.scss */
 #blog .blog_preview .exerpt {
   padding-bottom: 25px;
   font-family: "Aileron Light";
   font-size: 14px;
 }
-/* line 383, sass/elements/_elements.scss */
+/* line 407, sass/elements/_elements.scss */
 #blog .blog_preview .author {
   font-size: 12px;
   text-transform: uppercase;
   font-family: 'Aileron Bold';
   color: #e0334b;
 }
-/* line 388, sass/elements/_elements.scss */
+/* line 412, sass/elements/_elements.scss */
 #blog .blog_preview .author span {
   font-family: Crimson Text;
   text-transform: none;
   color: black;
 }
-/* line 397, sass/elements/_elements.scss */
+/* line 421, sass/elements/_elements.scss */
 #blog .photo-hover-content {
   opacity: 0;
   position: absolute;
@@ -1049,13 +1085,13 @@ section.site-branding h3, section.site-branding nav.main-navigation ul li, nav.m
   -moz-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
 }
-/* line 407, sass/elements/_elements.scss */
+/* line 431, sass/elements/_elements.scss */
 #blog .photo-hover-content .icon-container {
   position: relative;
   height: 100%;
   width: 100%;
 }
-/* line 411, sass/elements/_elements.scss */
+/* line 435, sass/elements/_elements.scss */
 #blog .photo-hover-content .icon-container img {
   height: auto;
   width: auto;
@@ -1066,7 +1102,7 @@ section.site-branding h3, section.site-branding nav.main-navigation ul li, nav.m
   left: 0;
   margin: auto;
 }
-/* line 422, sass/elements/_elements.scss */
+/* line 446, sass/elements/_elements.scss */
 #blog .photo-hover-content span.post-meta-data {
   position: absolute;
   top: 1em;
@@ -1075,31 +1111,31 @@ section.site-branding h3, section.site-branding nav.main-navigation ul li, nav.m
   font-family: 'Aileron SemiBold';
   text-align: center;
 }
-/* line 429, sass/elements/_elements.scss */
+/* line 453, sass/elements/_elements.scss */
 #blog .photo-hover-content span.post-meta-data .post-date {
   padding-bottom: 10px;
   margin-bottom: 20px;
   border-bottom: 1px solid white;
 }
-/* line 433, sass/elements/_elements.scss */
+/* line 457, sass/elements/_elements.scss */
 #blog .photo-hover-content span.post-meta-data .post-date .day {
   font-size: 12px;
 }
-/* line 436, sass/elements/_elements.scss */
+/* line 460, sass/elements/_elements.scss */
 #blog .photo-hover-content span.post-meta-data .post-date .month {
   font-size: 7px;
 }
-/* line 440, sass/elements/_elements.scss */
+/* line 464, sass/elements/_elements.scss */
 #blog .photo-hover-content span.post-meta-data img {
   width: 13px;
   height: auto;
   margin-bottom: 0px;
 }
-/* line 445, sass/elements/_elements.scss */
+/* line 469, sass/elements/_elements.scss */
 #blog .photo-hover-content span.post-meta-data .comments {
   font-size: 12px;
 }
-/* line 451, sass/elements/_elements.scss */
+/* line 475, sass/elements/_elements.scss */
 #blog .photo-hover-content.hover {
   opacity: 1;
   -webkit-transition: all 0.5s ease-in-out;
@@ -1107,77 +1143,77 @@ section.site-branding h3, section.site-branding nav.main-navigation ul li, nav.m
   transition: all 0.5s ease-in-out;
 }
 
-/* line 457, sass/elements/_elements.scss */
+/* line 481, sass/elements/_elements.scss */
 #featured_project {
   position: relative;
 }
-/* line 459, sass/elements/_elements.scss */
+/* line 483, sass/elements/_elements.scss */
 #featured_project .grid-items {
   height: 1050px;
   line-height: 30px;
 }
-/* line 463, sass/elements/_elements.scss */
+/* line 487, sass/elements/_elements.scss */
 #featured_project .grid-item.side1, #featured_project .grid-item.side2 {
   height: 100%;
   padding: 0;
 }
-/* line 466, sass/elements/_elements.scss */
+/* line 490, sass/elements/_elements.scss */
 #featured_project .grid-item.side1 img, #featured_project .grid-item.side2 img {
   margin: 0;
 }
-/* line 471, sass/elements/_elements.scss */
+/* line 495, sass/elements/_elements.scss */
 #featured_project .grid-item.side1 img {
   height: 700px;
   background-color: blue;
 }
-/* line 475, sass/elements/_elements.scss */
+/* line 499, sass/elements/_elements.scss */
 #featured_project .grid-item.side1 .side1_content {
   padding: 2em 2em 0 0;
 }
-/* line 477, sass/elements/_elements.scss */
+/* line 501, sass/elements/_elements.scss */
 #featured_project .grid-item.side1 .side1_content .side1_postscript {
   float: right;
   font-family: "Crimson Text Italic";
 }
-/* line 484, sass/elements/_elements.scss */
+/* line 508, sass/elements/_elements.scss */
 #featured_project .grid-item.side2 img {
   height: 600px;
   background-color: blue;
 }
-/* line 488, sass/elements/_elements.scss */
+/* line 512, sass/elements/_elements.scss */
 #featured_project .grid-item.side2 .side2_content {
   padding-left: 2em;
 }
-/* line 492, sass/elements/_elements.scss */
+/* line 516, sass/elements/_elements.scss */
 #featured_project p {
   margin-bottom: 50px;
 }
-/* line 495, sass/elements/_elements.scss */
+/* line 519, sass/elements/_elements.scss */
 #featured_project .project-data {
   margin: 50px 0;
   text-align: left;
   width: 300px;
 }
-/* line 499, sass/elements/_elements.scss */
+/* line 523, sass/elements/_elements.scss */
 #featured_project .project-data th {
   width: 60px;
 }
-/* line 502, sass/elements/_elements.scss */
+/* line 526, sass/elements/_elements.scss */
 #featured_project .project-data th.content {
   text-transform: uppercase;
   letter-spacing: 5px;
 }
-/* line 505, sass/elements/_elements.scss */
+/* line 529, sass/elements/_elements.scss */
 #featured_project .project-data th.content a {
   text-transform: none;
   letter-spacing: 0px;
 }
 @media screen and (min-width: 17.5em) {
-  /* line 514, sass/elements/_elements.scss */
+  /* line 538, sass/elements/_elements.scss */
   #featured_project .grid-item.side1 img, #featured_project .grid-item.side2 img {
     margin: 0 auto;
   }
-  /* line 518, sass/elements/_elements.scss */
+  /* line 542, sass/elements/_elements.scss */
   #featured_project .grid-item.side1 .side1_content, #featured_project .grid-item.side2 .side2_content {
     height: auto;
     padding: 0;
@@ -1185,70 +1221,70 @@ section.site-branding h3, section.site-branding nav.main-navigation ul li, nav.m
   }
 }
 @media screen and (min-width: 1200px) {
-  /* line 527, sass/elements/_elements.scss */
+  /* line 551, sass/elements/_elements.scss */
   #featured_project .grid-item.side1 img, #featured_project .grid-item.side2 img {
     margin: 0;
   }
-  /* line 531, sass/elements/_elements.scss */
+  /* line 555, sass/elements/_elements.scss */
   #featured_project .side1_content {
     height: 450px;
   }
-  /* line 534, sass/elements/_elements.scss */
+  /* line 558, sass/elements/_elements.scss */
   #featured_project .side2_content {
     height: 550px;
   }
-  /* line 537, sass/elements/_elements.scss */
+  /* line 561, sass/elements/_elements.scss */
   #featured_project .grid-item.side1 .side1_content {
     padding-right: 2em;
   }
-  /* line 541, sass/elements/_elements.scss */
+  /* line 565, sass/elements/_elements.scss */
   #featured_project .grid-item.side2 .side2_content {
     padding-left: 2em;
   }
 }
 
-/* line 549, sass/elements/_elements.scss */
+/* line 573, sass/elements/_elements.scss */
 #contact {
   padding-bottom: 0px;
   background-size: cover;
 }
-/* line 553, sass/elements/_elements.scss */
+/* line 577, sass/elements/_elements.scss */
 #contact h4 {
   margin-bottom: 0;
 }
 @media screen and (min-width: 17.5em) {
-  /* line 558, sass/elements/_elements.scss */
+  /* line 582, sass/elements/_elements.scss */
   #contact .container {
     position: relative;
   }
-  /* line 561, sass/elements/_elements.scss */
+  /* line 585, sass/elements/_elements.scss */
   #contact .contact-wrap {
     width: 100%;
   }
-  /* line 564, sass/elements/_elements.scss */
+  /* line 588, sass/elements/_elements.scss */
   #contact .contact-info-wrap {
     background-color: #eeeae3;
     padding: 2em 2em .5em 2em;
   }
-  /* line 569, sass/elements/_elements.scss */
+  /* line 593, sass/elements/_elements.scss */
   #contact .contact-form-wrap {
     background-color: #f9f2e4;
     padding: 2em 2em 1em 2em;
   }
 }
 @media screen and (min-width: 40em) {
-  /* line 576, sass/elements/_elements.scss */
+  /* line 600, sass/elements/_elements.scss */
   #contact .contact-wrap {
     width: 37.5%;
   }
 }
 
-/* line 582, sass/elements/_elements.scss */
+/* line 606, sass/elements/_elements.scss */
 footer {
   position: relative;
 }
 @media screen and (min-width: 17.5em) {
-  /* line 585, sass/elements/_elements.scss */
+  /* line 609, sass/elements/_elements.scss */
   footer .social {
     width: 100%;
     float: left;
@@ -1256,66 +1292,71 @@ footer {
     background-color: white;
     margin-bottom: 50px;
   }
-  /* line 591, sass/elements/_elements.scss */
+  /* line 615, sass/elements/_elements.scss */
   footer .social ul {
     margin: 0;
     padding: 0;
     font-size: 0;
   }
-  /* line 596, sass/elements/_elements.scss */
+  /* line 620, sass/elements/_elements.scss */
   footer .social li {
     list-style: none;
     display: inline-block;
     width: 25%;
     height: 50px;
   }
-  /* line 602, sass/elements/_elements.scss */
+  /* line 626, sass/elements/_elements.scss */
   footer .social li.facebook {
     background: url(icons/fb.png) center center no-repeat;
   }
-  /* line 604, sass/elements/_elements.scss */
+  /* line 628, sass/elements/_elements.scss */
   footer .social li.facebook:hover {
     background: url(icons/fb-hover.png) center center no-repeat;
   }
-  /* line 608, sass/elements/_elements.scss */
+  /* line 632, sass/elements/_elements.scss */
   footer .social li.twitter {
     background: url(icons/twitter.png) center center no-repeat;
   }
-  /* line 610, sass/elements/_elements.scss */
+  /* line 634, sass/elements/_elements.scss */
   footer .social li.twitter:hover {
     background: url(icons/twitter-hover.png) center center no-repeat;
   }
-  /* line 614, sass/elements/_elements.scss */
+  /* line 638, sass/elements/_elements.scss */
   footer .social li.behance {
     background: url(icons/behance.png) center center no-repeat;
   }
-  /* line 616, sass/elements/_elements.scss */
+  /* line 640, sass/elements/_elements.scss */
   footer .social li.behance:hover {
     background: url(icons/behance-hover.png) center center no-repeat;
   }
-  /* line 620, sass/elements/_elements.scss */
+  /* line 644, sass/elements/_elements.scss */
   footer .social li.dribble {
     background: url(icons/dribble.png) center center no-repeat;
   }
-  /* line 622, sass/elements/_elements.scss */
+  /* line 646, sass/elements/_elements.scss */
   footer .social li.dribble:hover {
     background: url(icons/dribble-hover.png) center center no-repeat;
   }
 }
 @media screen and (min-width: 40em) {
-  /* line 630, sass/elements/_elements.scss */
+  /* line 654, sass/elements/_elements.scss */
   footer .social {
     width: 37.5%;
   }
 }
-/* line 635, sass/elements/_elements.scss */
+/* line 659, sass/elements/_elements.scss */
 footer .textwidget {
   display: inline-block;
   margin: 2em 0 0 3em;
 }
-/* line 638, sass/elements/_elements.scss */
+/* line 662, sass/elements/_elements.scss */
 footer .textwidget p {
   margin: 0;
+}
+
+/* line 669, sass/elements/_elements.scss */
+.entry-meta {
+  font-family: "Crimson Text";
 }
 
 /*--------------------------------------------------------------
@@ -1326,42 +1367,83 @@ button,
 input[type="button"],
 input[type="reset"],
 input[type="submit"] {
-  border: 1px solid;
-  border-color: #ccc #ccc #bbb;
-  border-radius: 3px;
-  background: #e6e6e6;
-  color: rgba(0, 0, 0, 0.8);
-  font-size: 12px;
-  font-size: 0.75rem;
-  line-height: 1;
-  padding: .6em 1em .4em;
-  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.8);
-}
-/* line 15, sass/forms/_buttons.scss */
-button:hover,
-input[type="button"]:hover,
-input[type="reset"]:hover,
-input[type="submit"]:hover {
-  border-color: #ccc #bbb #aaa;
+  position: relative;
+  font-family: "Aileron Bold";
+  font-size: 16px;
+  text-transform: uppercase;
+  text-decoration: none;
+  vertical-align: top;
+  padding: 0;
+  border: none;
+  border-radius: 0;
+  border-bottom: 2px solid black;
+  background-color: transparent;
 }
 
-/* line 27, sass/forms/_buttons.scss */
+/* line 18, sass/forms/_buttons.scss */
+p.form-submit {
+  position: relative;
+  display: inline-block;
+}
+/* line 21, sass/forms/_buttons.scss */
+p.form-submit:after {
+  position: absolute;
+  content: url(icons/share.png);
+  display: inline-block;
+  right: -35px;
+  top: 3px;
+  border-bottom: none;
+  text-decoration: none;
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+/* line 31, sass/forms/_buttons.scss */
+p.form-submit:before {
+  position: absolute;
+  content: url(icons/share-hover.png);
+  display: inline-block;
+  right: -35px;
+  top: 3px;
+  border-bottom: none;
+  text-decoration: none;
+  opacity: 0;
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+/* line 43, sass/forms/_buttons.scss */
+p.form-submit:hover:before {
+  opacity: 1;
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+/* line 47, sass/forms/_buttons.scss */
+p.form-submit:hover:after {
+  opacity: 0;
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+/* line 55, sass/forms/_buttons.scss */
 .menu-item-125 {
   display: inline-block;
   padding: 0;
   margin: 0;
 }
 
-/* line 33, sass/forms/_buttons.scss */
+/* line 61, sass/forms/_buttons.scss */
 .bop-nav-search {
   position: absolute;
   top: 0;
   right: -10px;
 }
-/* line 38, sass/forms/_buttons.scss */
+/* line 66, sass/forms/_buttons.scss */
 .bop-nav-search input[type="submit"] {
   height: 20px;
-  width: auto;
+  width: 30px;
   display: inline-block;
   color: red;
   float: right;
@@ -1378,49 +1460,33 @@ input[type="submit"]:hover {
   transition: opacity .4s ease;
 }
 
-/* line 60, sass/forms/_buttons.scss */
-#contact input[type="submit"] {
-  position: relative;
-  font-family: "Aileron Bold";
-  font-size: 16px;
-  text-transform: uppercase;
-  text-decoration: none;
-  vertical-align: top;
-  padding: 0 0 5px 0;
-  border: none;
-  border-radius: 0;
-  border-bottom: 2px solid black;
-  background-color: transparent;
-}
-/* line 73, sass/forms/_buttons.scss */
+/* line 88, sass/forms/_buttons.scss */
 #contact #nf_submit_1 {
   position: relative;
   margin-right: 40px;
   display: inline-block;
   float: right;
 }
-/* line 78, sass/forms/_buttons.scss */
+/* line 93, sass/forms/_buttons.scss */
 #contact #nf_submit_1:after {
   position: absolute;
   content: url(icons/share.png);
   display: inline-block;
-  margin-left: 60px;
-  top: 0;
-  bottom: 0;
+  right: -35px;
+  top: 3px;
   border-bottom: none;
   text-decoration: none;
   -webkit-transition: all 0.5s ease-in-out;
   -moz-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
 }
-/* line 89, sass/forms/_buttons.scss */
+/* line 103, sass/forms/_buttons.scss */
 #contact #nf_submit_1:before {
   position: absolute;
   content: url(icons/share-hover.png);
   display: inline-block;
-  right: -40px;
-  top: 0;
-  bottom: 0;
+  right: -35px;
+  top: 3px;
   border-bottom: none;
   text-decoration: none;
   opacity: 0;
@@ -1428,14 +1494,14 @@ input[type="submit"]:hover {
   -moz-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
 }
-/* line 102, sass/forms/_buttons.scss */
+/* line 115, sass/forms/_buttons.scss */
 #contact #nf_submit_1:hover:before {
   opacity: 1;
   -webkit-transition: all 0.5s ease-in-out;
   -moz-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
 }
-/* line 106, sass/forms/_buttons.scss */
+/* line 119, sass/forms/_buttons.scss */
 #contact #nf_submit_1:hover:after {
   opacity: 0;
   -webkit-transition: all 0.5s ease-in-out;
@@ -1504,17 +1570,30 @@ input[type="week"],
 input[type="time"],
 input[type="datetime"],
 input[type="datetime-local"],
-input[type="color"] {
-  padding: 3px;
+input[type="color"],
+textarea {
+  height: 1.5em;
+  font-size: 1em;
+  display: inline-block;
+  font-family: "Aileron Light";
+  font-weight: 100;
+  border: none;
+  outline: none;
+  color: white;
+  width: 100%;
+  background: none;
+  z-index: 3;
+  cursor: text;
+  border-bottom: 1px solid white;
 }
 
-/* line 48, sass/forms/_fields.scss */
+/* line 61, sass/forms/_fields.scss */
 textarea {
   padding-left: 3px;
   width: 100%;
 }
 
-/* line 55, sass/forms/_fields.scss */
+/* line 68, sass/forms/_fields.scss */
 .bop-nav-search input[type="search"] {
   height: 1.5em;
   font-size: 1em;
@@ -1535,13 +1614,13 @@ textarea {
   transition: width 0.4s cubic-bezier(0, 0.795, 0, 1);
   cursor: pointer;
   border-radius: 0px;
-  margin-top: 4px;
+  margin-top: 3px;
 }
-/* line 78, sass/forms/_fields.scss */
+/* line 91, sass/forms/_fields.scss */
 .bop-nav-search input[type="search"]:focus:hover {
   border-bottom: 2px solid white;
 }
-/* line 82, sass/forms/_fields.scss */
+/* line 95, sass/forms/_fields.scss */
 .bop-nav-search input[type="search"]:focus {
   width: 80px;
   z-index: 1;
@@ -1550,21 +1629,9 @@ textarea {
   transition: width 0.4s cubic-bezier(0, 0.795, 0, 1);
 }
 
-/* line 93, sass/forms/_fields.scss */
+/* line 106, sass/forms/_fields.scss */
 #contact input[type="text"], #contact textarea {
   height: 1.5em;
-  font-size: 1em;
-  display: inline-block;
-  font-family: "Aileron Light";
-  font-weight: 100;
-  border: none;
-  outline: none;
-  color: white;
-  width: 100%;
-  background: none;
-  z-index: 3;
-  cursor: text;
-  border-bottom: 1px solid white;
 }
 
 /*--------------------------------------------------------------

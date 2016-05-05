@@ -60,9 +60,9 @@ get_header(); ?>
 				<!-- row 2 --> 
 				  <a href="javascript:void(0)" class="grid-item grid-item-three-eights" style="background-image:url(<?php the_field('row2-photo1'); ?>)">
 				    <div class="grid-item-content" style="background:rgba(<?php the_field('hover-color-2.1'); ?>, 0.7)">
-					    <img src="<?php the_field('gallery-icon'); ?>" alt="">
+					    <img src="<?php the_field('gallery-icon'); ?>" alt="" />
 					    <div>
-					    	<h4>Grid Item</h4>
+					  		<h4>Grid Item</h4>
 					    	<p>Lorem ipsum dolor sit amet, elit. Rem, illum.</p>
 					    </div>
 					    <span class="post_date">
@@ -72,23 +72,19 @@ get_header(); ?>
 					    </span>
 				   	</div>
 				  </a>
-				  <a href="javascript:void(0)" class="grid-item grid-item-fourth" style="background-image:url(<?php the_field('row2-photo2'); ?>)">
-				    <div class="grid-item-content" style="background:rgba(<?php the_field('hover-color-2.2'); ?>, 0.7)">
-					    <img src="<?php the_field('gallery-icon'); ?>" alt="">
+				  <div href="javascript:void(0)" class="grid-item grid-item-fourth" style="background-image:url(<?php the_field('row2-photo2'); ?>)">
+				    <div class="grid-item-content collection-title-block" style="background:rgba(<?php the_field('hover-color-2.2'); ?>, 0.7)">
+					    <img src="<?php the_field('collection-title-icon'); ?>" alt="" />
 					    <div>
-					    	<h4>Grid Item</h4>
-					    	<p>Lorem ipsum dolor sit amet, elit. Rem, illum.</p>
+					    	<h4><?php the_field('collection-title-block') ?></h4>
+					    	<p><?php the_field('collection-title-content') ?></p>
+					    	<a class="btn right"><span>Keep Reading</span></a>
 					    </div>
-					    <span class="post_date">
-					    	<img src="<?php the_field('clock-icon'); ?>" />
-					    	<div class="day"><?php the_field('post-day'); ?></div>
-					    	<div class="month"><?php the_field('post-month'); ?></div>
-					    </span>
 				   	</div>
-				  </a>
+				  </div>
 				  <a href="javascript:void(0)" class="grid-item grid-item-three-eights" style="background-image:url(<?php the_field('row2-photo3'); ?>)">
 				    <div class="grid-item-content" style="background:rgba(<?php the_field('hover-color-2.3'); ?>, 0.7)">
-					    <img src="<?php the_field('gallery-icon'); ?>" alt="">
+					    <img src="<?php the_field('gallery-icon'); ?>" alt="" />
 					    <div>
 					    	<h4>Grid Item</h4>
 					    	<p>Lorem ipsum dolor sit amet, elit. Rem, illum.</p>

@@ -41,8 +41,21 @@ input[type="week"],
 input[type="time"],
 input[type="datetime"],
 input[type="datetime-local"],
-input[type="color"] {
-	padding: 3px;
+input[type="color"],
+textarea {
+	height: 1.5em;
+      font-size: 1em;
+      display: inline-block;
+      font-family: "Aileron Light";
+      font-weight: 100;
+      border: none;
+      outline: none;
+      color: $color__white;
+      width: 100%;
+      background: none;
+      z-index: 3;
+      cursor: text;
+      border-bottom: 1px solid $color__white; 
 }
 
 textarea {
@@ -72,7 +85,7 @@ input[type="search"] {
   transition: width .4s cubic-bezier(0.000, 0.795, 0.000, 1.000);
   cursor: pointer;
   border-radius:0px;
-  margin-top:4px;
+  margin-top:3px;
 }
 
 input[type="search"]:focus:hover {
@@ -92,17 +105,5 @@ input[type="search"]:focus {
 #contact {
 	input[type="text"], textarea {
 		  height: 1.5em;
-		  font-size: 1em;
-		  display: inline-block;
-		  font-family: "Aileron Light";
-		  font-weight: 100;
-		  border: none;
-		  outline: none;
-		  color: $color__white;
-		  width: 100%;
-		  background: none;
-		  z-index: 3;
-		  cursor: text;
-		  border-bottom: 1px solid $color__white; 
 	}
 }

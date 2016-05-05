@@ -46,8 +46,8 @@ $font__code: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
 $font__pre: "Courier 10 Pitch", Courier, monospace;
 $font__line-height-body: 1.5;
 $font__line-height-pre: 1.6;
-$font__h1-size:5.750em;
-$font__h1-size-small:3em;
+$font__h1-size:3.25em;
+$font__h1-size-large:5.750em;
 $font__h2-size:3.125em;
 $font__h2-size-small:2em;
 $font__h3-size:1.25em;
@@ -62,6 +62,7 @@ $font__emphasis-size-small:12px;
 $font__postscript-size-small:12px;
 $font__aside-size-small:12px;
 $font__button-size:16px;
+$font__button-size-small:12px;
 
 
 @include media($large-screen) {

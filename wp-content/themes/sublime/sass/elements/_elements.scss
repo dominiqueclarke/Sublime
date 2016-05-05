@@ -146,8 +146,6 @@ section.site-branding {
 	.gallery.grid-items {
 		.grid-item {
 			padding:0;
-			a:hover {
-			}
 			text-align:center;
 			.grid-item-content {
 				position:relative;
@@ -174,6 +172,32 @@ section.site-branding {
 						width:13px;
 						height:auto;
 						margin-bottom:0px;
+					}
+				}
+			}
+			.grid-item-content.collection-title-block {
+				opacity:1;
+				color:$color__black;
+				h4 {
+					&:after {
+						border-color:black;
+					}
+				}
+
+				.btn {
+					font-size:$font__button-size-small;
+					&:after {
+						margin-left:10px;
+					}
+					@include media($small-screen) {
+						&:after, &:before {
+							display:none;
+						}
+					}
+					@include media($large-screen) {
+						&:after, &:before {
+							display:inline-block;
+						}
 					}
 				}
 			}
@@ -369,7 +393,7 @@ section.site-branding {
 
 	.blog_preview {
 		.btn {
-			font-size:12px;
+			font-size:$font__button-size-small;
 			span {
 				padding-bottom:5px;
 			}
@@ -639,4 +663,9 @@ footer {
 			margin: 0; 
 		}
 	}
+}
+
+//// POSTS ////
+.entry-meta {
+	font-family:$font__emphasis;
 }
